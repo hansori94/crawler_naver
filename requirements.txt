@@ -40,7 +40,7 @@ lz4-c=1.8.3=h6de7cb9_1001
 matplotlib-base=3.1.3=py37h9aa3819_0
 ncurses=6.2=h0a44026_0
 newspaper3k=0.2.8=py37_0
-nltk=3.4.4=py_0
+nltk=>3.4.5=py_0
 numpy=1.18.1=py37hde6bac1_0
 oauthlib=3.1.0=pypi_0
 olefile=0.46=py_0
