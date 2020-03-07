@@ -1,3 +1,9 @@
+# References:
+# https://github.com/sbomhoo/naver_news_crawling_perfect
+
+# Date created: March 6, 2020
+# author: Hannah Lee (hansori94)
+
 import requests
 from bs4 import BeautifulSoup
 from newspaper import Article
@@ -6,10 +12,6 @@ from konlpy.tag import Komoran
 from tqdm import tqdm
 import datetime
 from wordcloud import WordCloud
-
-
-# Date created: March 6, 2020
-# author: Hannah Lee (hansori94)
 
 
 def crawler(n, query):
