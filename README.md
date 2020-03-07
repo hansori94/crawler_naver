@@ -12,3 +12,6 @@ To run this program,
 3) run `conda activate <env>`
 4) open `naver_crawler.py`, change the arguments to main() 
 4) run `python naver_crawler.py` 
+
+Example output of 200 news articles of 'LP공사':
+![alt text](https://github.com/hansori94/crawler_naver/blob/master/results/wordclouds/200_LP%EA%B3%B5%EC%82%AC_030620_1927.png)
