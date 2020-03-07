@@ -8,6 +8,10 @@ import datetime
 from wordcloud import WordCloud
 
 
+# Date created: March 6, 2020
+# author: Hannah Lee (hansori94)
+
+
 def crawler(n, query):
     """
     returns n number of url's of news articles given a search query [query], sorted by relevance
