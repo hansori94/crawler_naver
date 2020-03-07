@@ -8,8 +8,8 @@ Requirements:
 
 To run this program,
 1) clone this repository 
-2) Either run `conda create --name <env> --file requirements.txt` or `conda env create -f naver_crawler.yml`
-3) run `conda activate <env>`
+2) run `conda env create -f naver_crawler.yml`
+3) run `conda activate naver_crawler`
 4) open `naver_crawler.py`, change the arguments to main() 
 4) run `python naver_crawler.py` 
 
