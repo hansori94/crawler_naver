@@ -57,13 +57,11 @@ def get_text(url):
 
 def parse(text):
     """
-    Returns a string of parsed nouns from [text], joined with a whitespace
-    using Komoran parser
+    Returns a list of parsed nouns from [text] using Komoran parser
     """
     komoran = Komoran()
     nouns = komoran.nouns(text)
-    result = " ".join(nouns)
-    return result
+    return nouns
 
 def create_wordcloud(parsed_text, filename, stopwords={}):
     """
@@ -80,6 +78,17 @@ def create_wordcloud(parsed_text, filename, stopwords={}):
 
     filename = filename +".png"
     wordcloud.to_file('results/wordclouds/'+filename)
+
+def get_freq(wordlist):
+    """
+    Returns a frequency dictionary given a list of words
+    """
+    wordfreq = [wordlist.count(p) for p in wordlist]
+    freqdict = dict(list(zip(wordlist,wordfreq)))
+
+    result = [(freqdict[key], key) for key in freqdict]
+    result.sort(reverse = True)
+    return result
 
 def main(n, query):
     """
@@ -121,8 +130,16 @@ def main(n, query):
             f.write(u+'\n')
 
     text = parse(result)
-    create_wordcloud(text, filename)
+
+    word_list = get_freq(text)
+    with open('results/freq/freq_' + filename + ".txt", "w") as f:
+        count = 1
+        for w in word_list:
+            f.write(str(count) + " " + str(w)+'\n')
+            count += 1
+
+    create_wordcloud(" ".join(text), filename)
 
 
 # To run:
-main(3, '페이스북')
+main(3, '유투브')
